@@ -1,0 +1,16 @@
+{
+  "name": "webpack-images",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Alexandre Kirszenberg <alexandre.kirszenberg@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "file-loader": "^0.8.1",
+    "image-webpack-loader": "^1.4.0",
+    "webpack": "^1.8.9"
+  }
+}
