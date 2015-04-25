@@ -2,11 +2,9 @@ var fs = require('fs');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './entry.js',
-
   output: {
     path: './build',
-    filename: 'output.js',
+    filename: 'dummy.js', // Never generated, but still required for webpack to run
   },
 
   module: {
