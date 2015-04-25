@@ -1,9 +1,12 @@
+var fs = require('fs');
+var webpack = require('webpack');
+
 module.exports = {
-  entry: './images.js',
+  entry: './entry.js',
 
   output: {
     path: './build',
-    filename: 'images.js',
+    filename: 'output.js',
   },
 
   module: {
@@ -17,4 +20,8 @@ module.exports = {
       },
     ],
   },
+
+  plugins: fs.readdirSync('./images').map(function(imagePath) {
+    return new webpack.PrefetchPlugin('./images/' + imagePath);
+  })
 };
